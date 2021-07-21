@@ -25,9 +25,9 @@ export default function Products() {
     setFilteredData(result)
   }
 
-  const sortPrice = (products) => {
-    products.sort((a, b) => parseFloat(a.price) - parseFloat(b.price))
-  }
+  // const sortPrice = (products) => {
+  //   products.sort((a, b) => parseFloat(a.price) - parseFloat(b.price))
+  // }
 
 
 
