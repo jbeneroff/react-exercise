@@ -19,14 +19,26 @@ export default function Products() {
     fetchProducts()
   }, [])
 
+  const handleSearch = () => {
+    const result = products.filter((data) => {
+      return (data.name.toLowerCase().includes(title.toLowerCase()))
+    })
+    setFilteredData(result)
+  }
+
+  const matches = filteredData.filter((item) => item.name.toLowerCase().includes(title.toLowerCase()))
+
   return (
     <div>
+      <form onSubmit={handleSearch}>
+        <input value={title} id='search' type="text" placeholder='Search' onChange={(e) => setTitle(e.target.value)} />
+      </form>
       <div id='list-div'>
-        {products.map((product, key) => {
+        {matches.map((product, key) => {
           return (
             < Link to={`/${product._id}`} className='list' >
               <div className='product-div'>
-                <img id='img' src={product.imgURL} alt="image" />
+                <img id='img' src={product.imgURL} alt="product" />
                 <h4 id='name'>{product.name}</h4>
                 <h3 id='price'>{product.price}</h3>
               </div>

@@ -1,3 +1,14 @@
+#list-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#name, #price {
+  text-decoration: none;
+}
+
+
 #img {
   height: 100px;
 }

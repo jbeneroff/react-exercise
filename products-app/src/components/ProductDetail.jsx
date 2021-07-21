@@ -21,7 +21,7 @@ export default function ProductDetail() {
 
   return (
     <div className='detail'>
-      <img id='img' src={product.imgURL} alt="image" />
+      <img id='img' src={product.imgURL} alt="product" />
       <h4 id='product-name'>{product.name}</h4>
       <h3 id='product-price'>{product.price}</h3>
       <p id='description'>{product.description}</p>
