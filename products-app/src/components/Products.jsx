@@ -14,6 +14,7 @@ export default function Products() {
       const res = await axios.get('https://products-api-01.herokuapp.com/api/products')
       setProducts(res.data)
       setFilteredData(res.data)
+      console.log(res.data)
     }
     fetchProducts()
   }, [])
@@ -39,7 +40,7 @@ export default function Products() {
       <div id='list-div'>
         {matches.map((product, key) => {
           return (
-            < Link to={`/${product._id}`} className='list' >
+            < Link to={`/${product._id}`} key={product._id} className='list' >
               <div className='product-div'>
                 <img id='img' src={product.imgURL} alt="product" />
                 <h2 id='name'>{product.name}</h2>
