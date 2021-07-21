@@ -33,14 +33,18 @@ export default function Products() {
       <form onSubmit={handleSearch}>
         <input value={title} id='search' type="text" placeholder='Search' onChange={(e) => setTitle(e.target.value)} />
       </form>
+      <form className='sort-form'>
+        <label for="sort">SORT BY:</label>
+        <select className="sort"><option className="option" value="name-ascending">&nbsp; Alphabetically, A-Z &nbsp;</option><option value="name-descending">&nbsp; Alphabetically, Z-A &nbsp;</option><option value="price-ascending">&nbsp; Price, low to high &nbsp;</option><option value="price-descending">&nbsp; Price, high to low &nbsp;</option></select>
+      </form>
       <div id='list-div'>
         {matches.map((product, key) => {
           return (
             < Link to={`/${product._id}`} className='list' >
               <div className='product-div'>
                 <img id='img' src={product.imgURL} alt="product" />
-                <h4 id='name'>{product.name}</h4>
-                <h3 id='price'>{`$${product.price}`}</h3>
+                <h2 id='name'>{product.name}</h2>
+                <h2 id='price'>{`$${product.price}`}</h2>
               </div>
             </Link>)
         })}
