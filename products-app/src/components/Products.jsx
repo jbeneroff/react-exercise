@@ -14,7 +14,6 @@ export default function Products() {
       const res = await axios.get('https://products-api-01.herokuapp.com/api/products')
       setProducts(res.data)
       setFilteredData(res.data)
-      console.log(res.data)
     }
     fetchProducts()
   }, [])
@@ -25,6 +24,12 @@ export default function Products() {
     })
     setFilteredData(result)
   }
+
+  const sortPrice = (products) => {
+    products.sort((a, b) => parseFloat(a.price) - parseFloat(b.price))
+  }
+
+
 
   const matches = filteredData.filter((item) => item.name.toLowerCase().includes(title.toLowerCase()))
 
