@@ -21,10 +21,12 @@ export default function ProductDetail() {
 
   return (
     <div className='detail'>
-      <img id='img' src={product.imgURL} alt="product" />
-      <h4 id='product-name'>{product.name}</h4>
-      <h3 id='product-price'>{product.price}</h3>
-      <p id='description'>{product.description}</p>
+      <img id='product-img' src={product.imgURL} alt="product" />
+      <div className='info'>
+        <h1 id='product-name'>{product.name}</h1>
+        <h2 id='product-price'>{`$${product.price}`}</h2>
+        <p id='description'>{product.description}</p>
+      </div>
     </div>
   )
 }

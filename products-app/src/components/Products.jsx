@@ -40,7 +40,7 @@ export default function Products() {
               <div className='product-div'>
                 <img id='img' src={product.imgURL} alt="product" />
                 <h4 id='name'>{product.name}</h4>
-                <h3 id='price'>{product.price}</h3>
+                <h3 id='price'>{`$${product.price}`}</h3>
               </div>
             </Link>)
         })}

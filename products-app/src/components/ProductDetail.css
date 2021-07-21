@@ -1,0 +1,15 @@
+.detail {
+  display: flex;
+  flex-direction: row;
+  padding: 80px 100px 100px;
+}
+
+#product-img {
+  height: 500px;
+  padding: 0 40px;
+}
+
+.info {
+  flex-direction: column;
+  padding: 10px;
+}

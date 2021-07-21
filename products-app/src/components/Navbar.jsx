@@ -6,7 +6,7 @@ export default function Navbar() {
 
   return (
     <div className='navbar'>
-      <Link to='/' id='header' ><h1 className='header'>ProductsApp</h1></Link>
+      <Link to='/' className='header' ><h1 id='header'>ProductsApp</h1></Link>
     </div>
   )
 }
