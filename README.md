@@ -20,7 +20,7 @@ Sorting is **bonus**.
 
 Here is the api: https://products-api-01.herokuapp.com/api/products
 
-Deploy to [Netlify](https://www.netlify.com) or [Surge](https://surge.sh).
+Deploy to [Netlify](https://www.netlify.com)
 
 **Pull Request when done.**
 > Include your deployment link in your Pull Request
