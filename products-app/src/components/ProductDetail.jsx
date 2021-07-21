@@ -14,7 +14,6 @@ export default function ProductDetail() {
       const URL = 'https://products-api-01.herokuapp.com/api/products'
       const res = await axios.get(`${URL}/${id}`)
       setProduct(res.data)
-      console.log(res)
     }
     fetchProduct()
   }, [id])

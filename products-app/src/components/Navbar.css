@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
 .header {
   text-decoration: none;
   color: black;
+  font-family: 'Kalam', cursive;
 }
 
 #header {
