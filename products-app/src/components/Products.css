@@ -20,7 +20,11 @@
   flex-direction: column;
   align-items: center;
   box-shadow: 0 0 3px 1px #cecece;
-  transition: all .25s;
+  transition: all .3s;
+}
+
+.product-div:hover {
+  transform: scale(1.1);
 }
 
 #img {
